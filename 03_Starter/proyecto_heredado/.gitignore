@@ -1,0 +1,17 @@
+# Entorno y secretos
+.venv/
+.env
+
+# Archivos temporales de Python y sus herramientas
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Artefactos de instalación
+build/
+dist/
+*.egg-info/
+
+# Sistema operativo
+.DS_Store
