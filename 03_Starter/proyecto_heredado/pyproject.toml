@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demanda"
+version = "0.1.0"
+description = "Estima la demanda de un producto a partir de sus ventas recientes."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+demanda = "demanda.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+# app.py es el script heredado, que se conserva sin cambios como referencia.
+extend-exclude = ["app.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
